@@ -1,0 +1,292 @@
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* navigation bar */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-link {
+  font-size: 1.1rem;
+}
+
+/* Spinner Wheel */
+.wrapper {
+  width: 90%;
+  max-width: 34.37em;
+  max-height: 90vh;
+  background-color: #ffffff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 3em;
+  border-radius: 1em;
+  box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#wheel {
+  max-height: inherit;
+  width: inherit;
+  top: 0;
+  padding: 0;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#spin-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 26%;
+  width: 26%;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0;
+  background: #795f5f;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+img {
+  position: absolute;
+  width: 4em;
+  top: 45%;
+  right: -8%;
+}
+#final-value {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 1.5em;
+  color: #202020;
+  font-weight: 500;
+}
+@media screen and (max-width: 992px) {
+  .wrapper {
+    font-size: 12px;
+  }
+  img {
+    right: -5%;
+  }
+}
+
+/* divs */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-top: 20px;
+}
+.container.py-4 {
+  margin-top: 650px;
+}
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/*footer*/
+.footer {
+  display: block;
+  text-align: center;
+  padding: 30px 0px 30px 0px !important ;
+  font-size: 30px !important;
+  background-color: #f1f1f1;
+  opacity: 0.6;
+}
+.footer i:hover {
+  color: gray;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+}
+
+/* Customiza Button */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tab-btn.active {
+  border-bottom: 3px solid #4285f4;
+  color: #4285f4;
+}
+
+.setting-row {
+  margin-bottom: 20px;
+}
+
+.slider {
+  width: 100%;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #666;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#cancel-btn {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+#ok-btn {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+/* Open Button */
+.modal-header {
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.saved-wheels-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.saved-wheel-item {
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.saved-wheel-item:hover {
+  background-color: #f8f9fa;
+}
+
+.saved-wheel-item.selected {
+  background-color: #e8f0fe;
+}
+
+.wheel-preview {
+  width: 60px;
+  height: 60px;
+  background-color: #e9ecef;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.wheel-details h4 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.wheel-details p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+#open-select-btn {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+#open-select-btn:disabled {
+  background-color: #a9a9a9;
+  cursor: not-allowed;
+}
+
+/* Save Button */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.save-options {
+  margin-bottom: 20px;
+}
+
+.save-option {
+  margin-bottom: 10px;
+}
+
+#save-confirm-btn {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
